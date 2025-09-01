@@ -9,3 +9,6 @@ bash install.sh
 ```
 
 zsh : https://github.com/romkatv/powerlevel10k
+fonts:
+- https://fontawesome.com/
+- https://www.nerdfonts.com/

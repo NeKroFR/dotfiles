@@ -14,7 +14,8 @@ set $mod Mod4
 # Set new window border to 1 pixel
 new_window pixel 1
 
-
+# dark mode
+exec --no-startup-id /usr/libexec/gsd-xsettings
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -197,10 +198,11 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar { 
-	position top
-	status_command ~/.config/bumblebee-status/bumblebee-status \
-	 -t  nord-powerline\
-	 -m  memory datetime hostname battery 
+    position top
+    status_command ~/.config/bumblebee-status/bumblebee-status \
+     -t nord-powerline \
+     -m memory datetime hostname battery
+    font pango:DejaVu Sans 10, FontAwesome 12
 }
 
 
@@ -208,7 +210,7 @@ bar {
 # wallpaper
 exec_always feh --bg-scale /home/nk0/Pictures/Wallpapers/guts.png
 #i3lock png only
-bindsym $mod+i exec betterlockscreen -l Pictures/Wallpapers/guts.png
+bindsym $mod+i exec i3lock #betterlockscreen -l Pictures/Wallpapers/guts.png
 
 # terminal -> w1
 #for_window [class="kitty"] move to workspace $ws1
@@ -225,6 +227,7 @@ exec --no-startup-id flameshot
 # Discord
 exec --no-startup-id discord
 
-bindsym XF86MonBrightnessUp exec --no-startup-id luminositéctl défini +10%
-bindsym XF86MonBrightnessDown exec --no-startup-id brightctl défini à 10%-
 
+# sudo visudo -> nk0 ALL=(ALL) NOPASSWD: /usr/bin/brightnessctl
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo brightnessctl set 10%+
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo brightnessctl set 10%-
