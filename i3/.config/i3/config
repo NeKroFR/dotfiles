@@ -128,7 +128,7 @@ set $ws1 "1"
 #: Terminal"
 set $ws2 "2"
 #: Chrome"
-set $ws3 "3: Discord"
+set $ws3 "3: Discord"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -199,7 +199,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar { 
     position top
-    status_command ~/.config/bumblebee-status/bumblebee-status \
+    status_command ~/.local/bin/bumblebee-status \
      -t nord-powerline \
      -m memory datetime hostname battery
     font pango:DejaVu Sans 10, FontAwesome 12
@@ -208,14 +208,10 @@ bar {
 
 
 # wallpaper
-exec_always feh --bg-scale /home/nk0/Pictures/Wallpapers/guts.png
+exec_always feh --bg-scale ~/Pictures/Wallpapers/guts.png
 #i3lock png only
 bindsym $mod+i exec i3lock #betterlockscreen -l Pictures/Wallpapers/guts.png
 
-# terminal -> w1
-#for_window [class="kitty"] move to workspace $ws1
-# chrome -> w2
-#for_window [class= "Google-chrome"] move to workspace $ws2
 # discord -> w3
 for_window [class="discord"] move to workspace $ws3
 
