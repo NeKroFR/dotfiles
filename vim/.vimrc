@@ -31,7 +31,8 @@ set list
 set listchars=tab:,.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
 
 " Formatting {
-    set nowrap                      " wrap long lines
+    set wrap                        " wrap long lines
+    set linebreak                   " don't cut words
     set autoindent                  " indent at the same level of the previous line
     set shiftwidth=4                " use indents of 4 spaces
     set expandtab                   " tabs are spaces, not tabs

@@ -1,6 +1,8 @@
 sudo apt update && sudo apt upgrade
-sudo apt install -y curl brightnessctl picom git stow i3 vim neovim flameshot kitty tmux \
-    tree rofi zsh zsh-autosuggestions zsh-syntax-highlighting python3 python3-pip feh textlive-fonts-extra
+sudo apt install -y curl brightnessctl picom git stow i3 vim neovim \
+    flameshot kitty tmux tree rofi zsh zsh-autosuggestions \
+    zsh-syntax-highlighting python3 python3-pip feh textlive-fonts-extra \
+    pulseaudio imagemagick
 sudo snap install discord
 PIP_BREAK_SYSTEM_PACKAGES=1 pip install bumblebee-status
 

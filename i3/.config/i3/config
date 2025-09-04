@@ -210,7 +210,7 @@ bar {
 # wallpaper
 exec_always feh --bg-scale ~/Pictures/Wallpapers/guts.png
 #i3lock png only
-bindsym $mod+i exec i3lock #betterlockscreen -l Pictures/Wallpapers/guts.png
+bindsym $mod+i exec ~/.config/i3/i3lockmore --image-fill ~/Pictures/Wallpapers/homelander.png
 
 # discord -> w3
 for_window [class="discord"] move to workspace $ws3

@@ -116,10 +116,14 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# tab does also hidden files and dir but not . and ..
+setopt globdots
 
-
+alias nv=nvim
+alias i3lock='~/.config/i3/i3lockmore --image-fill ~/Pictures/Wallpapers/homelander.png'
 alias python=python3
 alias ida=~/idapro-9.0/ida64
+alias dnspy64=wine ~/dnSpy-net-win64/dnSpy.exe
 
 fpath=(~/.local/share/zsh/site-functions $fpath)
 autoload -Uz compinit
